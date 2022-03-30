@@ -5,8 +5,6 @@ import java.util.List;
 import com.zc.entity.TeacherTaskBookOpening;
 
 /**
- * @date 2018-4-14
- * @author zhangC
  * 根据 thesisTitleId 查询所有信息
  * 添加任务书信息
  * 添加开题报告信息

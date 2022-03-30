@@ -703,17 +703,17 @@ public class TeacherController {
 		int teacherId = currentTeacher.getId();
 		List<ThesisTitle> thesisList = teacherService.showAllThesisTitle(teacherId);
 		
-		for(int i=0;i<thesisList.size();i++) {
-			int status = thesisList.get(i).getStatus();
-			if(status == 1) {
-				thesisList.get(i).setStatusName("未审核");
-			}else if(status == 2) {
-				thesisList.get(i).setStatusName("审核通过");
-			}else {
-				thesisList.get(i).setStatusName("未通过");
-			}
-		}
-		
+//		for(int i=0;i<thesisList.size();i++) {
+//			int status = thesisList.get(i).getStatus();
+//			if(status == 1) {
+//				thesisList.get(i).setStatusName("未审核");
+//			}else if(status == 2) {
+//				thesisList.get(i).setStatusName("审核通过");
+//			}else {
+//				thesisList.get(i).setStatusName("未通过");
+//			}
+//		}
+//
 		model.addAttribute("thesisTitleList", thesisList);
 		System.out.println("查询到该教师的课题有："+thesisList);
 		
