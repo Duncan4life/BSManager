@@ -52,7 +52,7 @@ import com.zc.service.ITeacherService;
 /**
  * 
  * 
- * @date 2018-4-6
+ * @date 2022-3-30
  * @author zhangC
  * teacherMainForm() 教师主页
  * teacherModifyInfoForm() 修改个人信息
@@ -596,22 +596,37 @@ public class TeacherController {
 	}
 	
 	@RequestMapping(value="/modifyInfoToDb",method=RequestMethod.POST)
-	public String teacherModifyInfoToDb(Model model,HttpServletRequest request,int id,String teacherNo, String departmentOld, String teacherName,String sex,String phone,String email,String zhicheng,String department) throws Exception {
-		
+	public String teacherModifyInfoToDb(Model model,HttpServletRequest request) throws Exception {
+
+
+//		,int id,String teacherNo, String departmentOld, String teacherName,String sex,String phone,String email,String zhicheng,String department
 		// 以下代码是教师修改教师信息的代码
 		int departmentId = 0;
-		departmentOld = new String(departmentOld.getBytes("iso-8859-1"),"utf-8");
-		departmentId =  departmentService.getIdByName(departmentOld);
+//		departmentOld = new String(departmentOld.getBytes("iso-8859-1"),"utf-8");
+		departmentId =  departmentService.getIdByName("departmentOld");
+
+
+		//**********************************int id = request.getId();
 		
-		teacherNo = new String(teacherNo.getBytes("iso-8859-1"),"utf-8");
-		teacherName = new String(teacherName.getBytes("iso-8859-1"),"utf-8");
-		sex = new String(sex.getBytes("iso-8859-1"),"utf-8");
+
+		String teacherNo = request.getParameter("teacherNo");
+		String departmentOld = request.getParameter("departmentOld");
+		String teacherName = request.getParameter("teacherName");
+		String sex = request.getParameter("sex");
+		String phone = request.getParameter("phone");
+		String email = request.getParameter("email");
+		String zhicheng = request.getParameter("zhicheng");
+		String department = request.getParameter("department");
+		
+//		teacherNo = new String(teacherNo.getBytes("iso-8859-1"),"utf-8");
+//		teacherName = new String(teacherName.getBytes("iso-8859-1"),"utf-8");
+//		sex = new String(sex.getBytes("iso-8859-1"),"utf-8");
 		User user = (User)request.getSession().getAttribute("currentUser");
 		String inputMan = user.getUserNo();
-		phone = new String(phone.getBytes("iso-8859-1"),"utf-8");
-		email = new String(email.getBytes("iso-8859-1"),"utf-8");
-		zhicheng = new String(zhicheng.getBytes("iso-8859-1"),"utf-8");
-		department = new String(department.getBytes("iso-8859-1"),"utf-8");
+//		phone = new String(phone.getBytes("iso-8859-1"),"utf-8");
+//		email = new String(email.getBytes("iso-8859-1"),"utf-8");
+//		zhicheng = new String(zhicheng.getBytes("iso-8859-1"),"utf-8");
+//		department = new String(department.getBytes("iso-8859-1"),"utf-8");
 		Date currentTime = new Date();
 		
 		Teacher teacher = new Teacher();
