@@ -47,13 +47,13 @@ import com.zc.service.ITeacherService;
 
 /**
  * 
- * @author zhangC
+ *
  * addStudentForm() 主页跳转到添加界面
  * addStudent() 添加学生   以废除
  * studentInfo() 学生修改个人信息跳转
  * 
  * @date 2018-4-6
- * @author zhangC 
+ *
  * @desc 都是跳转页面
  * studentMainForm() 跳转学生管理主页
  * studentMofidyInfoForm() 跳转学生 修改个人信息页

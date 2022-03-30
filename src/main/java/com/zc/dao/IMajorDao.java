@@ -5,8 +5,7 @@ import java.util.List;
 import com.zc.entity.Major;
 
 /**
- * @date 2018-4-10
- * @author zhangC
+
  * 查询全部的专业；
  * id ==> name
  * name ==> id

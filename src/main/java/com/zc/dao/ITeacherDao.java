@@ -17,8 +17,7 @@ import com.zc.entity.Teacher;
  * 更新教师
  * 查询教师信息 根据 编号、姓名、编号和姓名
  * 
- * @date 2018-4-11
- * @author zhangC
+
  * 查询教师的信息 根据教师no
  * 
  *
